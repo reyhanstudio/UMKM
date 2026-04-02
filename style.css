@@ -1,0 +1,441 @@
+/* ==============================
+   RESET & FOUNDATIONS
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Scroll halus */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAF7; /* Warna krem sangat muda */
+    color: #333;
+    overflow-x: hidden; /* Mencegah animasi membuat scroll samping */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Font elegan */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* ==============================
+   HEADER & NAVBAR
+   ============================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 60px; /* Ukuran logo 3D disesuaikan */
+    width: auto;
+    object-fit: contain;
+}
+
+.tagline-nav {
+    font-size: 13px;
+    color: #8C5A4C;
+    font-style: italic;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #8C5A4C;
+}
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+.hero {
+    min-height: 85vh;
+    background-color: #EFEBE4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 80px;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #5A3A31;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.btn-primary {
+    padding: 14px 35px;
+    background-color: #5A3A31;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #8C5A4C;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    padding: 14px 35px;
+    background-color: transparent;
+    color: #5A3A31;
+    border: 1px solid #5A3A31;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: #5A3A31;
+    color: #fff;
+}
+
+/* Elemen Highlights (3 Baris) */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Diubah dari 4 menjadi 3 */
+    gap: 30px;
+    border-top: 1px solid #d6cfc4;
+    padding-top: 30px;
+}
+
+.stat-item {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 2.8rem; /* Lebih besar agar menonjol */
+    font-weight: 700;
+    color: #5A3A31;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+
+/* Image Beranda */
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 80%;
+    max-width: 380px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 150px 150px 0 0; /* Efek Bingkai Lengkung Butik */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.accent-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: #D6CFC4;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* ==============================
+   PRODUCTS SECTION
+   ============================== */
+.products {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #5A3A31;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(90,58,49,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #8C5A4C;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-buy:hover {
+    background-color: #1DA851;
+}
+
+/* ==============================
+   ABOUT SECTION
+   ============================== */
+.about {
+    padding: 100px 50px;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image { flex: 1; }
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.about-text { flex: 1.2; }
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #5A3A31;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   SOCIAL MEDIAS (BARU)
+   ============================== */
+.social-medias {
+    background-color: #EFEBE4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.social-medias-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.social-medias-content h2 {
+    font-size: 2.2rem;
+    color: #5A3A31;
+    margin-bottom: 15px;
+}
+
+.social-medias-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.social-icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Gaya Tombol Ikon Lingkaran Premium */
+.icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Bulat sempurna */
+    background-color: #fff;
+    color: #5A3A31;
+    font-size: 24px;
+    border: 1px solid #ddd;
+}
+
+.icon-btn:hover {
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: transparent;
+}
+
+/* Warna Hover Khusus Platform */
+.icon-btn.fb:hover { background-color: #3b5998; }
+.icon-btn.ig:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+.icon-btn.tiktok:hover { background-color: #000000; }
+.icon-btn.wa:hover { background-color: #25D366; }
+.icon-btn.email:hover { background-color: #8C5A4C; /* Earth Tone */ }
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #5A3A31;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ==============================
+   DEFINISI ANIMASI (LUXURY)
+   ============================== */
+
+/* 1. Efek Fade In-Out Saat Scroll (CSS Utama) */
+.animate-on-scroll {
+    opacity: 0; /* Sembunyi sebelum scroll */
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1); /* Efek gerakan halus premium */
+    will-change: transform, opacity;
+}
+
+/* Class yang akan ditambahkan JS saat elemen terlihat */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translate(0, 0); /* Kembali ke posisi asli */
+}
+
+/* 2. Variasi Gerakan */
+.fade-in-up { transform: translateY(40px); }
+.fade-in-left { transform: translateX(-50px); }
+.fade-in-right { transform: translateX(50px); }
+
+/* 3. Animasi Load Awal (Tanpa Scroll JS) */
+.animate-fade-down {
+    animation: fadeDown 1s ease forwards;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   MEDIA QUERIES (RESPONSIF)
+   ============================== */
+@media (max-width: 992px) {
+    .hero { padding: 50px 30px; }
+    .hero-content h1 { font-size: 3rem; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; } /* Jadi 2x2 di tablet */
+}
+
+@media (max-width: 768px) {
+    header { padding: 15px 20px; flex-direction: column; gap: 10px; }
+    .tagline-nav { display: none; }
+    nav ul { gap: 15px; font-size: 12px; }
+
+    .hero { flex-direction: column-reverse; text-align: center; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-buttons { justify-content: center; flex-direction: column; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); justify-items: center; }
+    
+    .hero-image img { height: 400px; width: 100%; max-width: 300px; }
+    .accent-circle { width: 280px; height: 280px; }
+
+    .about-container { flex-direction: column; text-align: center; gap: 30px; }
+    .products, .about, .social-medias { padding: 60px 20px; }
+}
